@@ -7,7 +7,7 @@ export default function Header( {back}) {
       <div className="width">
         {back &&(
         <Link to='/'>
-          <svg
+          <svg className="arrow-head"
             xmlns="http://www.w3.org/2000/svg"
             // height="48"
             viewBox="0 200 980 980"
