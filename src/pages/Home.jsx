@@ -16,21 +16,21 @@ export default function Home() {
       <header className="home-search">
         <div className="width">
           <h2>Search for a coin 👌</h2>
-          <input type="text" value={store.query} onChange={store.setQuery} />
+          <input type="text" value={store.query} onChange={store.setQuery}/>
         </div>
       </header>
       <div className="home-cryptos">
         <div className="width">
           <h2>Trending Coins</h2>
-      {store.coins.length > 0 ? (
-        store.coins.map((coin) => {
+          <div className="home-cyrpto-list">
+     
+        {store.coins.map((coin) => {
           return (
             <ListItems key={coin.id} coin={coin}/>
           );
-        })
-      ) : (
-        <p>Loading...</p>
-      )}
+        })}
+      
+          </div>
         </div>
       </div>
     </div>

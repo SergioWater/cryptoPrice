@@ -9,10 +9,15 @@ export default function Listitems({ coin }) {
           <img src={coin.image} />
         </span>
         <span className="home-crypto-name">{coin.name}</span>
-        <span className="home-crypto-prices">
-          <span> {coin.priceBTC} BTC</span>
-          <span> {coin.priceUsd} USD</span>
-        </span>
+
+        {coin.priceBTC && (<span className="home-crypto-prices">
+          <span className="crypto-home-btc">
+            <img src="/bitcoin.webp" alt="" />
+            {coin.priceBTC} BTC
+          </span>
+          <span className="crypto-home-usd"> ( {coin.priceUsd} USD )</span>
+        </span>)
+        }
       </Link>
     </div>
   );

@@ -74,15 +74,23 @@ svg{
     }
 }
 .home-cryptos{
-    text-align: center;
+    padding-bottom: 60px;
     h2{
+    
+        text-align: center;
         font-size: 26px;
         margin-bottom: 20px;
+        margin-top: 20px;
     }
 }
+.home-cyrpto-list{
+    border-top: 1px solid #ddd;
+}
 .home-crypto{
+    
     a {
         display: flex;
+        gap: 30px;
         align-items: center;
         padding: 20px 0;
         border-bottom: 1px solid #ddd;
@@ -97,4 +105,21 @@ svg{
 }
 .home-crypto-name{
     flex: 1;
+    font-size: 20px;
+    color: #111;
+    font-weight: 600;
+}
+.crypto-home-btc{
+    color: #111;
+    font-size: 16px;
+    img{
+        width: 16px;
+        display: inline-block;
+        margin: -3px 5px 0 0;
+        vertical-align: middle;
+    }
+}
+.crypto-home-usd{
+    color: #666;
+    font-size: 12px;
 }
