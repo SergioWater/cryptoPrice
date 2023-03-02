@@ -7,7 +7,7 @@ import homeStore from "../stores/homeStore";
 export default function Home() {
   const store = homeStore();
   React.useEffect(() => {
-    if(store.trending.length === 0) store.fetchCoins();
+    store.fetchCoins();
   }, []);
 
   return (
