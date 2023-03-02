@@ -21,6 +21,10 @@ input[type='text']{
 a{
     text-decoration: none;
 }
+img{
+    max-width: 100%;
+    display: block;
+}
 .width{
     max-width: 600px;
     margin: 0 auto;
@@ -58,5 +62,39 @@ svg{
 .home-search{
     padding: 40px 9;
     text-align: center;
+    h2{
+        font-size: 32px;
+        margin-bottom: 20px;
+    }
+    input{
+        border: 1px solid #ddd;
+        padding: 0 24px;
+        border-radius: 8px;
+        line-height: 54px;
+    }
+}
+.home-cryptos{
+    text-align: center;
+    h2{
+        font-size: 26px;
+        margin-bottom: 20px;
+    }
+}
+.home-crypto{
+    a {
+        display: flex;
+        align-items: center;
+        padding: 20px 0;
+        border-bottom: 1px solid #ddd;
+    }
 
+    span{
+        display: block;
+    }
+}
+.home-crypto-image{
+    width: 50px;
+}
+.home-crypto-name{
+    flex: 1;
 }

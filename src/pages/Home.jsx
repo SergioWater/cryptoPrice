@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Header from "../components/Header";
+import ListItems from "../components/ListItems";
 import homeStore from "../stores/homeStore";
 
 export default function Home() {
@@ -18,17 +19,20 @@ export default function Home() {
           <input type="text" value={store.query} onChange={store.setQuery} />
         </div>
       </header>
+      <div className="home-cryptos">
+        <div className="width">
+          <h2>Trending Coins</h2>
       {store.coins.length > 0 ? (
         store.coins.map((coin) => {
           return (
-            <div key={coin.id}>
-              <Link to={`/${coin.id}`}>{coin.name}</Link>
-            </div>
+            <ListItems key={coin.id} coin={coin}/>
           );
         })
       ) : (
         <p>Loading...</p>
       )}
+        </div>
+      </div>
     </div>
   );
 }
